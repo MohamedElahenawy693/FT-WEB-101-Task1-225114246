@@ -1,0 +1,161 @@
+﻿:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f2f2f2;
+}
+
+body.dark {
+    --bg-color: #121212;
+    --text-color: #f2f2f2;
+    --card-bg: #1e1e1e;
+}
+
+* {
+    box-sizing: border-box; /* مطلوب في التعليمات */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 10px 20px;
+}
+
+.cards-row {
+    display: flex;
+    gap: 20px; /* مسافة بين الكاردز */
+    margin: 20px 0;
+}
+
+.card {
+    flex: 1;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.profile-photo img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin: 15px 0;
+}
+.contact-section {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .contact-section h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .form-group label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .form-group input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .submit-btn:hover {
+        background-color: #0056b3;
+    }
+/* تنسيق زر الدارك مود الجديد (شكل أيقونة دائرية فخمة) */
+.theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+    .theme-toggle-btn:hover {
+        transform: scale(1.1);
+    }
+
+/* أنيميشن وتأثيرات الكروت (Cards) */
+.card {
+    flex: 1;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    /* لما الماوس يجي فوق الكارد (ترتفع لفوق وتعمل ظل) */
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* لما تضغط على الكارد تفتح وتكبر أكتر (Active Effect) */
+    .card:active {
+        transform: scale(1.03) translateY(-4px);
+    }
+/* أنيميشن وتأثيرات لنموذج التواصل (Contact Section) مثل الكروت */
+.contact-section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    /* لما الماوس يجي فوق الفورم بالكامل */
+    .contact-section:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+/* تأثير احترافي إضافي لخانات الإدخال (Inputs) لما تقف جواها */
+.form-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
